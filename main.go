@@ -19,6 +19,11 @@ func main() {
 			if err != nil {
 				panic(err)
 			}
+
+			err = populate.CreateBills(app)
+			if err != nil {
+				panic(err)
+			}
 		},
 	})
 

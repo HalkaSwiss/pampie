@@ -6,7 +6,7 @@ require (
 	github.com/brianvoe/gofakeit/v6 v6.25.0
 	github.com/pocketbase/dbx v1.10.1
 	github.com/pocketbase/pocketbase v0.19.4
-	github.com/spf13/cobra v1.7.0
+	github.com/spf13/cobra v1.8.0
 )
 
 require (

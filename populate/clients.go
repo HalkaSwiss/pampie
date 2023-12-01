@@ -7,13 +7,13 @@ import (
 )
 
 func CreateClients(app *pocketbase.PocketBase) error {
-	collection, err := app.Dao().FindCollectionByNameOrId("clients")
+	clients, err := app.Dao().FindCollectionByNameOrId("clients")
 	if err != nil {
 		return err
 	}
 
-	for i := 0; i < 20; i++ {
-		record := models.NewRecord(collection)
+	for i := 0; i < 5000; i++ {
+		record := models.NewRecord(clients)
 		record.Set("name", gofakeit.Name())
 		record.Set("contact", gofakeit.Email())
 		record.Set("type", gofakeit.RandomString([]string{"Client", "Prospect"}))
